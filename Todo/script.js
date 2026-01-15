@@ -25,3 +25,4 @@ for (let key in userdata) {
   console.log( key );  // name, age, isAdmin
   // values for the keys
   console.log( userdata[key] ); // John, 30, true
+}
