@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tailwind v4 Test</title>
+  <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="bg-[#F8F8F8] h-24 flex justify-evenly items-center">
+    <div class="text-3xl">Dashboard</div>
+    <!-- input field -->
+    <div class="flex items-center gap-x-1 bg-amber-600 w-lg">
+      <input type="search" placeholder="Search..."
+        class=" w-md border border-gray-300 rounded-md pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-7 h-7 text-gray-600 hover:text-blue-500 cursor-pointer">
+          <path fill-rule="evenodd"
+            d="M10.5 3a7.5 7.5 0 1 0 4.67 13.37l3.73 3.73a1 1 0 0 0 1.42-1.42l-3.73-3.73A7.5 7.5 0 0 0 10.5 3Zm-5.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0Z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+
+    </div>
+
+
+    <div class="flex gap-4">
+      <!-- bell icon -->
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-7 h-7 text-gray-600 hover:text-blue-500 cursor-pointer">
+          <path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-14 0v5l-2 2v1h18v-1l-2-2Z" />
+        </svg>
+      </div>
+
+      <!-- Calendar -->
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-7 h-7 text-gray-600 hover:text-blue-500 cursor-pointer">
+          <path
+            d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 8h-15v9.5c0 .276.224.5.5.5h14c.276 0 .5-.224.5-.5V10ZM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6Z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Main Body Dashboard -->
+
+  <div class="bg-yellow-400 flex justify-between">
+
+    <!-- left -->
+    <nav class="w-80 min-h-screen bg-gray-900 text-white">
+      <ul class="flex flex-col p-4 gap-2">
+        <li>
+          <a href="#" class="block rounded px-4 py-2 hover:bg-gray-700">
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block rounded px-4 py-2 hover:bg-gray-700">
+            Vital Task
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block rounded px-4 py-2 hover:bg-gray-700">
+            My Task
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block rounded px-4 py-2 hover:bg-gray-700">
+            Task Categories
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block rounded px-4 py-2 hover:bg-gray-700">
+            Settings
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block rounded px-4 py-2 hover:bg-gray-700">
+            Help
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- Right -->
+    <div class="bg-blue-500 min-h-190.25 min-w-239.5 border border-[#A1A3ABA1]">
+      
+    </div>
+  </div>
+
+</body>
+
+</html>
