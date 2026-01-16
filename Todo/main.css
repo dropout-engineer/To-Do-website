@@ -1,0 +1,29 @@
+
+/* here I write my custom class name which i need to use in js
+inside these classes there are tailwind classes. 
+
+
+exmaple - 
+
+@import "tailwindcss";
+
+Custom components 
+
+@layer components {
+  .note-input {
+    @apply w-[200px] h-[100px] bg-blue-100 border-4 border-blue-300 rounded-xl p-2 resize-none focus:outline-none;
+  }
+
+  .btn-done {
+    @apply bg-orange-200 px-4 py-2 rounded-xl font-medium hover:bg-orange-300 transition;
+  }
+
+  .note {
+    @apply bg-white text-gray-400 text-sm rounded-xl p-4 shadow-md shadow-gray-300 max-w-[240px] whitespace-pre-wrap;
+  }
+}
+
+
+
+
+*/
