@@ -7,36 +7,24 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-amber-600: oklch(66.6% 0.179 58.318);
+    --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-xs: 20rem;
     --container-md: 28rem;
     --container-lg: 32rem;
-    --container-xl: 36rem;
-    --container-2xl: 42rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
-    --font-weight-bold: 700;
     --radius-md: 0.375rem;
-    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -199,14 +187,44 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .h-7 {
     height: calc(var(--spacing) * 7);
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
+  .min-h-64 {
+    min-height: calc(var(--spacing) * 64);
+  }
+  .min-h-179 {
+    min-height: calc(var(--spacing) * 179);
+  }
+  .min-h-179\.75 {
+    min-height: calc(var(--spacing) * 179.75);
+  }
+  .min-h-190 {
+    min-height: calc(var(--spacing) * 190);
+  }
   .min-h-190\.25 {
     min-height: calc(var(--spacing) * 190.25);
+  }
+  .min-h-\[4\] {
+    min-height: 4;
+  }
+  .min-h-\[7px\] {
+    min-height: 7px;
+  }
+  .min-h-\[719\] {
+    min-height: 719;
+  }
+  .min-h-\[719px\] {
+    min-height: 719px;
+  }
+  .min-h-\[761px\] {
+    min-height: 761px;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -223,11 +241,56 @@
   .w-md {
     width: var(--container-md);
   }
+  .min-w-16 {
+    min-width: calc(var(--spacing) * 16);
+  }
+  .min-w-16\.5 {
+    min-width: calc(var(--spacing) * 16.5);
+  }
+  .min-w-106 {
+    min-width: calc(var(--spacing) * 106);
+  }
+  .min-w-106\.5 {
+    min-width: calc(var(--spacing) * 106.5);
+  }
+  .min-w-116 {
+    min-width: calc(var(--spacing) * 116);
+  }
+  .min-w-116\.5 {
+    min-width: calc(var(--spacing) * 116.5);
+  }
+  .min-w-239 {
+    min-width: calc(var(--spacing) * 239);
+  }
   .min-w-239\.5 {
     min-width: calc(var(--spacing) * 239.5);
   }
+  .min-w-466 {
+    min-width: calc(var(--spacing) * 466);
+  }
+  .min-w-\[423\] {
+    min-width: 423;
+  }
+  .min-w-\[423px\] {
+    min-width: 423px;
+  }
+  .min-w-\[466px\] {
+    min-width: 466px;
+  }
+  .min-w-\[906px\] {
+    min-width: 906px;
+  }
+  .min-w-\[958px\] {
+    min-width: 958px;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -275,11 +338,20 @@
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
+  .bg-blue-900 {
+    background-color: var(--color-blue-900);
+  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
+  }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
+  }
+  .bg-yellow-300 {
+    background-color: var(--color-yellow-300);
   }
   .bg-yellow-400 {
     background-color: var(--color-yellow-400);
@@ -308,6 +380,13 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .hover\:bg-gray-700 {
     &:hover {
@@ -342,6 +421,11 @@
   }
 }
 @property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -415,6 +499,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-outline-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
