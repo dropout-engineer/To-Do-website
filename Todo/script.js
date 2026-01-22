@@ -1,28 +1,48 @@
+// Tadd New Task Logic
 
-function makeUser(name, age){
-    return{
-        name,
-        age,
+let titleInput = document.querySelector(".js-input");
+let textArea = document.querySelector(".js-textarea");
+let submitButton = document.querySelector(".js-button");
+
+submitButton?.addEventListener("click", () => {
+  let dataObject = {
+    title: titleInput.value,
+    text: textArea.value,
+  };
+
+  localStorage.setItem("taskData", JSON.stringify(dataObject));
+  window.location.href = "Dashboard.html";
+});
+
+// Dashboard Logic
+
+let heading = document.querySelector(".js-heading");
+if (heading) {
+    const storedData = localStorage.getItem("taskData");
+    if(storedData){
+        const parsedData = JSON.parse(storedData)
+        // const titlePara = document.createElement('p')
+        heading.innerText = parsedData.title;
+
+        // heading.appendChild(titlePara)
+        
     }
 }
 
-let user = makeUser("John", 30);
-console.log(user)
-console.log(user.age)
+// let titleInputValue = titleInput.value
+// let textAreaValue = textArea.value
 
-console.log(user["age"])
-console.log(typeof(makeUser))
-console.log(typeof(user))
+// let paragraph1 = document.createElement('p')
+// let paragraph2 = document.createElement('p')
 
-let userdata = {
-  name: "John",
-  age: 30,
-  isAdmin: true
-};
+// let title = document.createTextNode(titleInputValue)
+// let text = document.createTextNode(textAreaValue);
 
-for (let key in userdata) {
-  // keys
-  console.log( key );  // name, age, isAdmin
-  // values for the keys
-  console.log( userdata[key] ); // John, 30, true
-}
+// // paragraph1.textContent = titleInputValue
+// // paragraph2.textContent = textAreaValue
+
+// paragraph1.appendChild(title)
+// paragraph2.appendChild(text)
+
+// div.appendChild(paragraph1)
+// div.appendChild(paragraph2);

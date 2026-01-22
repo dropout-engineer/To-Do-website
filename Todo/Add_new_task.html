@@ -15,7 +15,8 @@
         <!-- Top Row -->
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-lg font-medium">Add New Task</h2>
-            <button class="text-sm text-gray-600 border border-gray-300 hover:bg-gray-200 transition delay-50 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 px-4 py-1 rounded-md">
+            <button
+                class="text-sm text-gray-600 border border-gray-300 hover:bg-gray-200 transition delay-50 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 px-4 py-1 rounded-md">
                 Go Back
             </button>
         </div>
@@ -23,7 +24,8 @@
         <!-- Title -->
         <div class="mb-4">
             <label class="block text-sm mb-1">Title</label>
-            <input type="text" class="w-[511px] h-[37px] border border-gray-300 rounded-md px-3 outline-none" />
+            <input type="text"
+                class="js-input w-[511px] h-[37px] border border-gray-300 rounded-md px-3 outline-none" />
         </div>
 
         <!-- Date -->
@@ -58,17 +60,17 @@
         <div>
             <label class="block text-sm mb-1">Task Description</label>
             <textarea
-                class="w-[511px] h-[205px] border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 placeholder-gray-400 resize-none outline-none"
+                class="js-textarea w-[511px] h-[205px] border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 placeholder-gray-400 resize-none outline-none"
                 placeholder="Start writing here"></textarea>
         </div>
 
         <button
-            class="bg-orange-600 mt-8 ml-3 hover:bg-sky-400 cursor-pointer w-[90px] h-[34px] font-medium text-white text-[14px] rounded-lg transition delay-50 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110">
+            type="button" class="js-button bg-orange-600 mt-8 ml-3 hover:bg-sky-400 cursor-pointer w-[90px] h-[34px] font-medium text-white text-[14px] rounded-lg transition delay-50 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110">
             Done
         </button>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
