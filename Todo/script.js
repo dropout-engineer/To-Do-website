@@ -4,6 +4,8 @@ let titleInput = document.querySelector(".js-input");
 let textArea = document.querySelector(".js-textarea");
 let submitButton = document.querySelector(".js-button");
 
+
+
 submitButton?.addEventListener("click", () => {
   let dataObject = {
     title: titleInput.value,
@@ -14,35 +16,32 @@ submitButton?.addEventListener("click", () => {
   window.location.href = "Dashboard.html";
 });
 
+
 // Dashboard Logic
 
-let heading = document.querySelector(".js-heading");
-if (heading) {
+// let noteHeading = document.querySelector(".js-heading");
+let noteDiv = document.querySelector(".js-notes-container");
+if (noteDiv) {
     const storedData = localStorage.getItem("taskData");
+    console.log("storedData:", storedData);
     if(storedData){
         const parsedData = JSON.parse(storedData)
-        // const titlePara = document.createElement('p')
-        heading.innerText = parsedData.title;
-
-        // heading.appendChild(titlePara)
-        
+        const noteCard = createNotesCard(parsedData.title)
+        noteDiv.append(noteCard)
     }
 }
 
-// let titleInputValue = titleInput.value
-// let textAreaValue = textArea.value
+function createNotesCard(title) {
+  const parentDiv = document.createElement("div");
 
-// let paragraph1 = document.createElement('p')
-// let paragraph2 = document.createElement('p')
+  parentDiv.className =
+    "bg-yellow-300 border border-[#A1A3AB] rounded-xl w-96 h-[166px] p-4";
 
-// let title = document.createTextNode(titleInputValue)
-// let text = document.createTextNode(textAreaValue);
+  const heading = document.createElement("h2");
+  heading.className = "text-base font-semibold";
+  heading.textContent = title;
 
-// // paragraph1.textContent = titleInputValue
-// // paragraph2.textContent = textAreaValue
+  parentDiv.append(heading);
 
-// paragraph1.appendChild(title)
-// paragraph2.appendChild(text)
-
-// div.appendChild(paragraph1)
-// div.appendChild(paragraph2);
+  return parentDiv;
+}

@@ -26,3 +26,24 @@ Custom components
 
 */
 
+@import "tailwindcss";
+
+@layer components{
+  .js-card-style{
+    @apply  bg-yellow-300 
+      border 
+      border-[#A1A3AB] 
+      rounded-xl 
+      w-96 
+      h-[166px]
+      p-4;
+  }
+
+  .card-body{
+    @apply max-w-[374.17px] bg-red-700 h-[144px] mx-4 my-2;
+  }
+
+  .js-heading-style{
+    @apply text-base font-semibold;
+  }
+}
