@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="output.css">
 </head>
 
-<body>
+<body class="relative">
 
   <!-- Navbar -->
   <div class="bg-[#F8F8F8] h-24 flex justify-evenly items-center">
@@ -101,7 +101,7 @@
         <div class="mx-4 min-w-[466px] min-h-[719px] bg-red-300">
           <div class="flex justify-between">
             <h2>To-do</h2>
-            <button class="bg-transparent px-3 py-1 rounded font-medium
+            <button type="button" class="js-addTask bg-black px-3 py-1 rounded font-medium
          hover:bg-blue-50 transition text-gray-400">
               <span class="text-pink-400">+</span> Add Task
             </button>
@@ -115,7 +115,7 @@
             <!-- nischal main div -->
             <div class=" js-notes-container "> <!--Triel div-->
               <!-- <div > -->
-              
+
               <!-- </div> -->
             </div>
           </div>
@@ -128,6 +128,76 @@
       </div>
     </div>
   </div>
+
+
+
+
+  <!-- Add New Task Pop-up -->
+
+  <!-- Main Container -->
+  <div class="js-addTaskModal fixed hidden inset-0 bg-black/50 flex items-center justify-center z-50">  <!-- custom-->
+    <div class=" w-[918px] h-[708px] p-[20px] bg-white border border-gray-300 rounded-lg">
+
+      <!-- Top Row -->
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-lg font-medium">Add New Task</h2>
+        <button type="button"
+          class=" text-sm text-gray-600 border border-gray-300 hover:bg-gray-200 transition delay-50 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 px-4 py-1 rounded-md">
+          Go Back
+        </button>
+      </div>
+
+      <!-- Title -->
+      <div class="mb-4">
+        <label class="block text-sm mb-1">Title</label>
+        <input type="text" class="js-input w-[511px] h-[37px] border border-gray-300 rounded-md px-3 outline-none" />
+      </div>
+
+      <!-- Date -->
+      <div class="mb-4">
+        <label class="block text-sm mb-1">Date</label>
+        <input type="date" class="w-[511px] h-[37px] border border-gray-300 rounded-md px-3 outline-none" />
+      </div>
+
+      <!-- Priority -->
+      <div class="mb-4">
+        <p class="text-sm mb-2">Priority</p>
+
+        <div class="flex gap-4">
+          <label class="flex items-center gap-2 text-gray-500">
+            <input type="checkbox" class="accent-gray-400" />
+            Extreme
+          </label>
+
+          <label class="flex items-center gap-2 text-gray-500">
+            <input type="checkbox" class="accent-gray-400" />
+            Moderate
+          </label>
+
+          <label class="flex items-center gap-2 text-gray-500">
+            <input type="checkbox" class="accent-gray-400" />
+            Low
+          </label>
+        </div>
+      </div>
+
+      <!-- Task Description -->
+      <div>
+        <label class="block text-sm mb-1">Task Description</label>
+        <textarea
+          class="js-textarea w-[511px] h-[205px] border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 placeholder-gray-400 resize-none outline-none"
+          placeholder="Start writing here"></textarea>
+      </div>
+
+      <button type="button"
+        class="js-button bg-orange-600 mt-8 ml-3 hover:bg-sky-400 cursor-pointer w-[90px] h-[34px] font-medium text-white text-[14px] rounded-lg transition delay-50 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110">
+        Done
+      </button>
+
+    </div>
+  </div>
+
+
   <script src="script.js" defer></script>
 </body>
 
